@@ -30,8 +30,7 @@ const useStyles = createStyles((theme) => ({
 
   mainLinkActive: {
     color: theme.colorScheme === "dark" ? theme.white : theme.black,
-    borderBottomColor:
-      theme.colors[theme.primaryColor][theme.colorScheme === "dark" ? 5 : 6],
+    borderBottomColor: "#FF7676",
   },
 
   mainLink: {
@@ -64,7 +63,21 @@ const SignOutButton = () => {
     navigate("/");
   }
 
-  return <Button onClick={signOutUser}>Sign out</Button>;
+  return (
+    <Button
+      onClick={signOutUser}
+      styles={(theme) => ({
+        root: {
+          backgroundColor: "#6147FF",
+          "&:not([data-disabled])": theme.fn.hover({
+            opacity: 0.7,
+          }),
+        },
+      })}
+    >
+      Sign out
+    </Button>
+  );
 };
 
 const mainLinks = [

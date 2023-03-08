@@ -162,7 +162,14 @@ const DependentsList = ({
             fullWidth
             className={classes.button}
             onClick={handleAddDependentClick}
-            color={theme.primaryColor}
+            styles={(theme) => ({
+              root: {
+                backgroundColor: "#6147FF",
+                "&:not([data-disabled])": theme.fn.hover({
+                  opacity: 0.7,
+                }),
+              },
+            })}
           >
             <div className={classes.label}>Add Dependent</div>
           </Button>

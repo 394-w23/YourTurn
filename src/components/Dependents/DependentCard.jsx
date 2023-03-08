@@ -123,6 +123,11 @@ const DependentCard = ({
             alt="Kid's image"
             width={100}
             height={100}
+            styles={(theme) => ({
+              root: {
+                color: "#6147FF",
+              },
+            })}
           />
 
           {showAll && (
@@ -157,8 +162,17 @@ const DependentCard = ({
           <Card.Section className={classes.section}>
             <Group spacing={30}>
               <Button
+                styles={(theme) => ({
+                  root: {
+                    color: "#6147FF",
+                    "&:not([data-disabled])": theme.fn.hover({
+                      opacity: 0.7,
+                    }),
+                  },
+                })}
                 style={{ flex: 1 }}
                 variant="outline"
+                color="#"
                 onClick={(event) => {
                   handleEditDependent(dependent, event);
                 }}
