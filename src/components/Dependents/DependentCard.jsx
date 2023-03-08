@@ -172,7 +172,6 @@ const DependentCard = ({
                 })}
                 style={{ flex: 1 }}
                 variant="outline"
-                color="#"
                 onClick={(event) => {
                   handleEditDependent(dependent, event);
                 }}
